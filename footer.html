@@ -10,11 +10,16 @@
             <li><a href="project.html">Project</a></li>
             
             <li><a href="service.html">Service</a></li>
-            
-            <li><a href="pricing.html">Pricing</a></li>
-            
-            <li><a href="faq.html">FAQ</a></li>
-            
+			
+			<li class="dropdown" id="group-of-companies-footer" onclick="group_of_companies_toggle()">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+				  aria-expanded="false">Group of companies <span class="ion-ios-arrow-down"></span></a>
+				<ul class="dropdown-menu">
+				  <li><a href="http://afetechnologies.com">Arc & fusion E-Technologies Pvt. Ltd.-India</a></li>
+				  <li><a href="http://arcandfusion.com">Arc & Fusion (I) Pvt. Ltd.-India</a></li>    
+				</ul>
+			</li>
+			
             <li><a href="contact.html">Contact</a></li>
             
 					</ul>
@@ -24,6 +29,17 @@
 		</div>
 	</div>
 </footer>
+
+<script>
+    function group_of_companies_toggle(){
+      var navbar = document.getElementById("group-of-companies-footer");
+      if (navbar.classList.contains("open")){
+        navbar.classList.remove("open");
+      }else{
+        navbar.classList.add("open");
+      }
+    }
+  </script>
 
 <script src="plugins/bootstrap/bootstrap.min.js"></script>
 

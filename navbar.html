@@ -22,9 +22,19 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="project.html">Project</a></li>
                 <li><a href="service.html">Service</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                
+                <li class="dropdown" id="group-of-companies-navbar" onclick="group_of_companies_toggle_navbar()">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Group of companies <span class="ion-ios-arrow-down"></span></a>
+                  <ul class="dropdown-menu dropdown-menu-navbar">
+                    <li><a href="http://afetechnologies.com">Arc & fusion E-Technologies Pvt. Ltd.-India</a></li>
+                    <li><a href="http://arcandfusion.com">Arc & Fusion (I) Pvt. Ltd.-India</a></li>    
+                  </ul>
+                </li>
+
                 <li><a href="contact.html">Contact</a></li>
-                <li>
+                
+                <!-- <li>
                   <select id="select-language" onchange="location = this.value;">
                     <option id="en" value="/" selected>
                       En
@@ -32,7 +42,9 @@
                     <option id="fr" value="/fr/">Fr
                     </option>
                   </select>
-                </li>
+                </li> -->
+
+                <li style="margin-top:1%"><div id="google_translate_element"></div></li>
               </ul>
             </div>
           </nav>
@@ -40,3 +52,27 @@
       </div>
     </div>
   </header>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ar,ara,en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>
+    function group_of_companies_toggle_navbar(){
+      var navbar = document.getElementById("group-of-companies-navbar");
+      if (navbar.classList.contains("open")){
+        navbar.classList.remove("open");
+      }else{
+        navbar.classList.add("open");
+      }
+    }
+  </script>
+  <style>
+    .dropdown-menu-navbar{
+      width: 300px;
+      white-space: normal;
+    }
+  </style>
+  
